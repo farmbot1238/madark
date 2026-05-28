@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدارك جو</title>
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#FFD700">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="مدارك جو">
+  <meta name="description" content="منصة موارد دراسية مجانية لطلاب الأردن">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Stars background -->
+<div class="stars" id="starsContainer"></div>
+
+<!-- =================== LANDING PAGE =================== -->
+<div id="landing">
+  <div class="hero">
+    <div class="logo-wrap">
+      <div class="logo-text">مدارك <span class="logo-jo">.jo</span></div>
+    </div>
+
+    <div class="badge-first">منصة الطلاب الأردنيين المجانية الأولى</div>
+    <div class="hero-subtitle">كل ما يحتاجه الطالب في مكان واحد</div>
+    <p class="hero-desc">
+      روابط مختارة بعناية لأدوات دراسية، امتحانات وزارية، كتب، تحديات سرعة، ودردشات دراسية تعاونية.
+      كل ما تحتاجه في مكان واحد — أسرع وأذكى.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-num">+500</div>
+        <div class="stat-label">طالب دخل المنصة</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2009</div>
+        <div class="stat-label">جيل المؤسس</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">مجاناً</div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <span class="notice-icon">🚫</span>
+      <span class="notice-text">
+        <strong>تنبيه مهم:</strong> مدارك جو ليست منصة للحصص المسجلة أو الدروس الخصوصية.
+        نحن منصة موارد دراسية مجانية فقط.
+      </span>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <div class="section-card">
+      <div class="section-title">نبذة عن المنصة</div>
+      <p class="about-text">
+        بدأت فكرة مدارك جو من طالب واحد أراد أن يجمع كل ما يحتاجه زملاؤه في مكان واحد سهل الوصول.
+        المنصة تقدم روابط مختارة بعناية لأدوات دراسية، امتحانات وزارية، كتب، تحديات سرعة، ودردشات دراسية تعاونية.
+        هدفنا الوحيد: توفير الوقت ورفع الإنجاز لكل طالب.
+      </p>
+
+      <div class="features-grid" style="margin-top: 28px;">
+        <div class="feature-item"><div class="feature-icon">📚</div><div class="feature-name">مواد دراسية</div></div>
+        <div class="feature-item"><div class="feature-icon">📝</div><div class="feature-name">امتحانات وزارية</div></div>
+        <div class="feature-item"><div class="feature-icon">⚡</div><div class="feature-name">تحديات السرعة</div></div>
+        <div class="feature-item"><div class="feature-icon">💬</div><div class="feature-name">دردشة دراسية</div></div>
+        <div class="feature-item"><div class="feature-icon">📖</div><div class="feature-name">كتب وزارية</div></div>
+        <div class="feature-item"><div class="feature-icon">🎯</div><div class="feature-name">مؤشر الإنجاز</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <div style="font-size: 1.3rem; font-weight: 700; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+      <span>◈</span> أسئلة شائعة
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">من أسس المنصة؟<span class="faq-arrow">▼</span></div>
+      <div class="faq-a">طالب من جيل 2009 أراد خدمة زملائه بتجميع أفضل الموارد التعليمية المجانية.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">هل المنصة مجانية؟<span class="faq-arrow">▼</span></div>
+      <div class="faq-a">نعم، مدارك جو مجانية 100% وستبقى كذلك. لا حصص، لا اشتراكات، لا رسوم.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">هل فيها حصص مسجلة؟<span class="faq-arrow">▼</span></div>
+      <div class="faq-a">لا، المنصة ليست للحصص المسجلة. هي فقط منصة موارد دراسية وروابط مختارة.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">كيف أتواصل مع الفريق؟<span class="faq-arrow">▼</span></div>
+      <div class="faq-a">يمكنك التواصل عبر البريد الإلكتروني abdalrhmanmaaith1@gmail.com أو من خلال نموذج الاقتراحات المتاح في المنصة.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">هل المنصة متاحة لجيل 2010؟<span class="faq-arrow">▼</span></div>
+      <div class="faq-a">جيل 2010 قيد الإنشاء حالياً وسيكون متاحاً قريباً. ترقب الإعلان!</div>
+    </div>
+  </div>
+
+  <!-- Year Selector -->
+  <div class="year-section">
+    <p class="year-label">اختر جيلك للدخول إلى منصتك</p>
+    <div class="year-cards">
+      <div class="year-card y2009" onclick="go2009()">
+        <div class="year-crown">👑</div>
+        <div class="year-num">2009</div>
+        <div class="year-sub">ادخل الآن ←</div>
+      </div>
+      <div class="year-card y2010" onclick="show2010Modal()">
+        <div class="year-crown">⏳</div>
+        <div class="year-num">2010</div>
+        <div class="year-sub">قريباً...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Construction Modal -->
+<div id="constructionModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-icon">🚧</div>
+    <div class="modal-title">قيد الإنشاء</div>
+    <p class="modal-text">منصة جيل 2010 لا تزال تحت البناء والتطوير.<br>ترقب الإطلاق قريباً إن شاء الله! 🔥</p>
+    <button class="modal-close" onclick="document.getElementById('constructionModal').classList.remove('show')">حسناً، سأنتظر</button>
+  </div>
+</div>
+
+<!-- =================== 2009 PAGE =================== -->
+<div id="page2009">
+
+  <!-- Topbar -->
+  <div class="topbar-2009">
+    <div class="topbar-right">
+      <button class="hamburger" onclick="toggleSidebar()" aria-label="القائمة">
+        <div class="ham-line"></div>
+        <div class="ham-line"></div>
+        <div class="ham-line"></div>
+      </button>
+      <div class="topbar-title">👑 مدارك جو — 2009</div>
+    </div>
+    <button class="back-btn" onclick="goBack()">← العودة</button>
+  </div>
+
+  <!-- Sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-logo">👑 مدارك جو</span>
+      <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+    </div>
+    <div class="sidebar-content">
+
+      <div class="sidebar-group-title">⚙️ خدمات عامة</div>
+      <div class="sidebar-link" onclick="loadFrame('https://madarik-exams-hub.lovable.app','الحس الوزاري',this)">
+        <span class="sidebar-link-icon">📋</span> الحس الوزاري
+      </div>
+      <div class="sidebar-link" onclick="openNewTab('https://www.youtube.com/@OSAID123-u2q/shorts')">
+        <span class="sidebar-link-icon">▶️</span> صدقة جارية (يوتيوب) ↗
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://my-achievement-buddy.lovable.app','الإنجاز',this)">
+        <span class="sidebar-link-icon">🏆</span> الإنجاز
+      </div>
+      <div class="sidebar-link" data-chat-link onclick="openChatWithRules(this)">
+        <span class="sidebar-link-icon">💬</span> دردشة دراسية
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://spiritual-boost.lovable.app','أجر وثواب',this)">
+        <span class="sidebar-link-icon">🌙</span> أجر وثواب
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://unified-login-pal.lovable.app','مشاركة ملفات',this)">
+        <span class="sidebar-link-icon">📁</span> مشاركة ملفات الدراسة
+      </div>
+      <div class="sidebar-link" onclick="openNewTab('https://discord.gg/CpF8Uk8Yt')">
+        <span class="sidebar-link-icon">🎮</span> سيرفر ديسكورد ↗
+      </div>
+      <div class="sidebar-link" onclick="openNewTab('https://www.youtube.com/@Pyabd/posts')">
+        <span class="sidebar-link-icon">📢</span> تحديثات الموقع ↗
+      </div>
+      <div class="sidebar-link" onclick="openNewTab('https://notebooklm.google.com/notebook/20623484-45c7-4f42-9421-655b2b3d2e0d')">
+        <span class="sidebar-link-icon">📓</span> NoteBookLM ↗
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/timer/','مؤقت',this)">
+        <span class="sidebar-link-icon">⏱️</span> مؤقت (Timer)
+      </div>
+
+      <div class="sidebar-group-title">📖 الفصل الأول</div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/DEEN/','الدين — ف1',this)">
+        <span class="sidebar-link-icon">☪️</span> الدين
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/Ardic/','العربي — ف1',this)">
+        <span class="sidebar-link-icon">🖊️</span> العربي
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/MMMNII/','التاريخ — ف1',this)">
+        <span class="sidebar-link-icon">🏛️</span> التاريخ
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/ENG1/','الانجليزي — ف1',this)">
+        <span class="sidebar-link-icon">🇬🇧</span> الانجليزي
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/BNK/','بنوك ف1',this)">
+        <span class="sidebar-link-icon">🏦</span> بنوك الفصل الأول
+      </div>
+
+      <div class="sidebar-group-title">📘 الفصل الثاني</div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/d1/','الدين — ف2',this)">
+        <span class="sidebar-link-icon">☪️</span> الدين
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/a1/','العربي — ف2',this)">
+        <span class="sidebar-link-icon">🖊️</span> العربي
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/t1/','التاريخ — ف2',this)">
+        <span class="sidebar-link-icon">🏛️</span> التاريخ
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/e1/','الانجليزي — ف2',this)">
+        <span class="sidebar-link-icon">🇬🇧</span> الانجليزي
+      </div>
+
+      <div class="sidebar-group-title">⚡ إضافات مفيدة</div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/thd1/','تحدي السرعة الشامل',this)">
+        <span class="sidebar-link-icon">🚀</span> تحدي السرعة الشامل
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/thd2/','تحدي السرعة اليومي',this)">
+        <span class="sidebar-link-icon">⚡</span> تحدي السرعة اليومي
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/w2/','امتحانات وزارية سابقة',this)">
+        <span class="sidebar-link-icon">📝</span> امتحانات وزارية سابقة
+      </div>
+      <div class="sidebar-link" onclick="loadFrame('https://farmbot1238.github.io/Book/','كتب وزارية',this)">
+        <span class="sidebar-link-icon">📚</span> كتب وزارية
+      </div>
+
+      <div class="sidebar-group-title">📬 تواصل</div>
+      <div class="sidebar-link" onclick="loadFrame('https://docs.google.com/forms/d/e/1FAIpQLSeOP7ow84vcJ-q8tm4YlHsKMCuGdoL-E5OCJw6C66PDrbMpWw/viewform','نموذج الاقتراحات',this)">
+        <span class="sidebar-link-icon">💡</span> نموذج الاقتراحات
+      </div>
+      <div class="sidebar-link" onclick="copyEmail()">
+        <span class="sidebar-link-icon">📧</span> نسخ البريد الإلكتروني
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero 2009 -->
+  <div class="hero-2009">
+    <span class="crown-big">👑</span>
+    <div class="year-2009-title">2009</div>
+    <div class="year-2009-sub">جيل المؤسسين — مدارك جو</div>
+    <div class="gold-divider"></div>
+    <p style="color: var(--muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto;">
+      اختر من القائمة الجانبية لفتح أي قسم
+    </p>
+  </div>
+
+</div>
+
+<!-- =================== FULLSCREEN VIEWER =================== -->
+<div id="fullViewer">
+  <div class="viewer-bar">
+    <button class="viewer-back-btn" onclick="closeViewer()">← رجوع</button>
+    <div id="viewerTitle"></div>
+    <div id="viewerSpinner"></div>
+  </div>
+  <iframe id="mainIframe"
+    sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin"
+    allow="fullscreen"
+  ></iframe>
+</div>
+
+<!-- =================== CHAT RULES MODAL =================== -->
+<div id="chatRulesModal">
+  <div class="chat-modal-box">
+    <div class="chat-modal-gold-bar"></div>
+    <div class="chat-modal-body">
+      <div class="chat-modal-header">
+        <div class="chat-modal-icon">⚖️</div>
+        <div class="chat-modal-title">قوانين الدردشة الدراسية</div>
+        <div class="chat-modal-sub">اقرأ القوانين قبل الدخول</div>
+      </div>
+
+      <div class="rules-box">
+        <div class="rules-box-title"><span>💬</span> قوانين قسم الشات</div>
+        <ul class="rules-list">
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يُمنع منعًا باتًا استخدام الشات للأحاديث الجانبية.</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>الشات للأسئلة والاستفسارات الدراسية فقط.</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يُمنع افتعال المشاكل أو النقاشات الاستفزازية.</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يجب احترام جميع الأعضاء والمشرفين.</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يُمنع نشر محتوى غير مناسب أو روابط عشوائية.</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يمنع إرسال الرسائل المتكررة (Spam).</li>
+          <li><span style="color:#ef4444;flex-shrink:0;">•</span>يُمنع انتحال شخصية أي عضو أو مشرف.</li>
+          <li class="warn"><span style="color:#ef4444;flex-shrink:0;">•</span>أي مخالفة قد تؤدي إلى تحذير، تايم اوت، أو حظر.</li>
+        </ul>
+      </div>
+
+      <div class="rules-box">
+        <div class="rules-box-title"><span>🏆</span> قوانين قسم الجولات</div>
+        <ul class="rules-list">
+          <li><span style="color:#f59e0b;flex-shrink:0;">•</span>الالتزام بوقت الجولة وعدم تعطيلها.</li>
+          <li><span style="color:#f59e0b;flex-shrink:0;">•</span>يمنع الغش بأي طريقة داخل الجولات.</li>
+          <li><span style="color:#f59e0b;flex-shrink:0;">•</span>البريك للنقاشات الخفيفة باحترام فقط.</li>
+          <li><span style="color:#f59e0b;flex-shrink:0;">•</span>العودة فوراً للجولة بعد البريك.</li>
+        </ul>
+      </div>
+
+      <div class="chat-modal-btns">
+        <button class="btn-decline" onclick="declineChat()">رجوع</button>
+        <button class="btn-accept" onclick="acceptChat()">✓ فهمت وأوافق — ادخل</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script>
+  // Register Service Worker for PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('SW registered'))
+        .catch(err => console.log('SW error:', err));
+    });
+  }
+
+  // Handle #2009 hash for PWA shortcuts
+  if (window.location.hash === '#2009') {
+    window.addEventListener('DOMContentLoaded', () => go2009());
+  }
+</script>
+</body>
+</html>
